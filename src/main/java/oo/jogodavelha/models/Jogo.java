@@ -2,24 +2,32 @@ package oo.jogodavelha.models;
 
 import java.util.ArrayList;
 
+import oo.jogodavelha.exceptions.ExcecaoPorCoordenadaInvalida;
+import oo.jogodavelha.exceptions.ExcecaoPorSimboloInvalido;
+
 public class Jogo extends Tabuleiro {
-	
-	public ArrayList<Character> test = new ArrayList<Character>();
+
+	public ArrayList<Character> historicoDeJogadas = new ArrayList<Character>();
 
 	public void init() {
 	}
 
-	public void add(Jogada jogada)  {
-		test.add(jogada.getC());
-		if (check(jogada)) {
+	public void add(Jogada jogada)throws ExcecaoPorCoordenadaInvalida, ExcecaoPorSimboloInvalido{
+		try {
+		    if (check(jogada)) {
+			historicoDeJogadas.add(jogada.getC());
 			getBoard().put(jogada.getCoordenada(), jogada.getC());
-		} else {
-			System.err.println("Jogada Inválida");
+		    }
+		}catch(ExcecaoPorSimboloInvalido | ExcecaoPorCoordenadaInvalida s) {
+			throw s;
 		}
 	}
 
-	public boolean check(Jogada umaJogada) {
-		
+	public boolean check(Jogada umaJogada) throws ExcecaoPorCoordenadaInvalida, ExcecaoPorSimboloInvalido{
+		int x = umaJogada.getCoordenada().getX();
+		int y = umaJogada.getCoordenada().getY();
+
+		// Gambiarra
 		Character board[][] = new Character[3][3];
 		for (Coordenada c : getBoard().keySet()) {
 			board[c.getX()][c.getY()] = getBoard().get(c);
@@ -31,27 +39,46 @@ public class Jogo extends Tabuleiro {
 				}
 			}
 		}
-		if(test.isEmpty()) {
+		
+
+		// Verificando se o jogador está fazendo 2 jogadas seguidas
+		if (historicoDeJogadas.isEmpty()) {
 			System.out.println("Historico de jogadas vazio");
-		}else if(test.get(test.size() - 1).equals('X') || test.get(test.size() -1 ).equals('O')) {
-			return false;
+		} else if (historicoDeJogadas.get(historicoDeJogadas.size() - 1).equals(umaJogada.getC())) {
+				ExcecaoPorSimboloInvalido n = new ExcecaoPorSimboloInvalido("Jogada inválida por já ter um simbolo no local");
+				throw n;
 		}
 
-		if (umaJogada.getCoordenada().getX() > 2 || umaJogada.getCoordenada().getX() < 0 || umaJogada.getCoordenada().getY() > 2 || umaJogada.getCoordenada().getY() < 0) {
-			return false;
-		}else if (board[umaJogada.getCoordenada().getX()][umaJogada.getCoordenada().getY()].equals('X') || board[umaJogada.getCoordenada().getX()][umaJogada.getCoordenada().getY()].equals('O')) {
-			return false;
-		}else {
+		// Verificando se a coordenada informada é válida
+		if (x > 2 || x < 0 || y > 2 || y < 0) {
+				ExcecaoPorCoordenadaInvalida n = new ExcecaoPorCoordenadaInvalida("Coordenada informada é inválida");
+				throw n;
+			// Verificando se na coordenada informada já existe um simbolo
+		} else if (board[x][y].equals('X') || board[x][y].equals('O')) {
+				ExcecaoPorCoordenadaInvalida n = new ExcecaoPorCoordenadaInvalida("Coordenada informada é inválida");
+				throw n;
+			//Lançar excessão por simbolo inválida
+		} else {
 			return true;
 		}
+		
+		
 
-			/*
-			 * if (umaJogada.getCoordenada().getX() > 2 || umaJogada.getCoordenada().getX()
-			 * < 0 || umaJogada.getCoordenada().getY() > 2 ||
-			 * umaJogada.getCoordenada().getY() < 0) { return false; } else { for
-			 * (Coordenada c : getBoard().keySet()) { if (getBoard().containsKey(c)) {
-			 * return false; } } }
-			 */
+		/*
+		 * for (Coordenada c : getBoard().keySet()) { if
+		 * (getBoard().containsKey(umaJogada.getCoordenada()) { return false; } }
+		 */
+	}
+	
+	// throws ExcecaoPorCoordenadaInvalida, ExcecaoPorSimboloInvalido
+	private static void test1() throws ExcecaoPorSimboloInvalido {
+		ExcecaoPorSimboloInvalido n = new ExcecaoPorSimboloInvalido("Jogada inválida por já ter um simbolo no local");
+		throw n;
+	}
+	
+	private static void test() throws ExcecaoPorCoordenadaInvalida {
+		ExcecaoPorCoordenadaInvalida n = new ExcecaoPorCoordenadaInvalida("Coordenada informada é inválida");
+		throw n;
 	}
 
 	public void showBoard() {

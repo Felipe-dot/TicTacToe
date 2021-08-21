@@ -1,0 +1,6 @@
+oo/jogodavelha/tests/regras/RegrasDeJogadaTest.java
+ oo.jogodavelha.tests.regras.RegrasDeJogadaTest
+oo/jogodavelha/tests/regras/RegrasDeConfiguracaoDeJogoTest.java
+ oo.jogodavelha.tests.regras.RegrasDeConfiguracaoDeJogoTest
+oo/jogodavelha/tests/regras/RegrasDeVitoriaTest.java
+ oo.jogodavelha.tests.regras.RegrasDeVitoriaTest
