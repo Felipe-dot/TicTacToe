@@ -87,8 +87,14 @@ public class Jogo extends Tabuleiro {
 		if (historicoDeJogadas.isEmpty()) {
 //			System.err.println("Historico de jogadas vazio");
 		} else if (historicoDeJogadas.get(historicoDeJogadas.size() - 1).equals(umaJogada.getC())) {
+					if(board[x][y].equals('X') || board[x][y].equals('O')) {
+				ExcecaoPorCoordenadaInvalida n = new ExcecaoPorCoordenadaInvalida("Jogada inválida, coordenada informada já foi marcada");
+				throw n;
+			}else {
 				ExcecaoPorSimboloInvalido n = new ExcecaoPorSimboloInvalido("Jogada inválida, ainda não é sua vez");
 				throw n;
+			}
+		
 		}
 
 		// Verificando se a coordenada informada é válida
