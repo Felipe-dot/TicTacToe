@@ -24,5 +24,6 @@ public class Jogada {
 	public void setCoordenada(Coordenada coordenada) {
 		this.coordenada = coordenada;
 	}
-
+	
+	
 }

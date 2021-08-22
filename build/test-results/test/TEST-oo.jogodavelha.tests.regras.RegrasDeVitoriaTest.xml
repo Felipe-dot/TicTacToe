@@ -1,53 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="oo.jogodavelha.tests.regras.RegrasDeVitoriaTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2021-08-21T19:44:30" hostname="pop-os" time="0.059">
+<testsuite name="oo.jogodavelha.tests.regras.RegrasDeVitoriaTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2021-08-22T00:24:11" hostname="pop-os" time="0.109">
   <properties/>
-  <testcase name="testHasWinnerDiagonal1()" classname="oo.jogodavelha.tests.regras.RegrasDeVitoriaTest" time="0.003"/>
+  <testcase name="testHasWinnerDiagonal1()" classname="oo.jogodavelha.tests.regras.RegrasDeVitoriaTest" time="0.005"/>
   <testcase name="testHasWinnerDiagonal2()" classname="oo.jogodavelha.tests.regras.RegrasDeVitoriaTest" time="0.001"/>
-  <testcase name="[1] 0, X" classname="oo.jogodavelha.tests.regras.RegrasDeVitoriaTest" time="0.013"/>
+  <testcase name="[1] 0, X" classname="oo.jogodavelha.tests.regras.RegrasDeVitoriaTest" time="0.031"/>
   <testcase name="[2] 0, O" classname="oo.jogodavelha.tests.regras.RegrasDeVitoriaTest" time="0.001"/>
   <testcase name="[3] 1, X" classname="oo.jogodavelha.tests.regras.RegrasDeVitoriaTest" time="0.001"/>
-  <testcase name="[4] 1, O" classname="oo.jogodavelha.tests.regras.RegrasDeVitoriaTest" time="0.0"/>
+  <testcase name="[4] 1, O" classname="oo.jogodavelha.tests.regras.RegrasDeVitoriaTest" time="0.001"/>
   <testcase name="[5] 2, X" classname="oo.jogodavelha.tests.regras.RegrasDeVitoriaTest" time="0.001"/>
   <testcase name="[6] 2, O" classname="oo.jogodavelha.tests.regras.RegrasDeVitoriaTest" time="0.0"/>
   <testcase name="[1] 0, X" classname="oo.jogodavelha.tests.regras.RegrasDeVitoriaTest" time="0.0"/>
   <testcase name="[2] 0, O" classname="oo.jogodavelha.tests.regras.RegrasDeVitoriaTest" time="0.001"/>
   <testcase name="[3] 1, X" classname="oo.jogodavelha.tests.regras.RegrasDeVitoriaTest" time="0.001"/>
-  <testcase name="[4] 1, O" classname="oo.jogodavelha.tests.regras.RegrasDeVitoriaTest" time="0.0"/>
-  <testcase name="[5] 2, X" classname="oo.jogodavelha.tests.regras.RegrasDeVitoriaTest" time="0.0"/>
-  <testcase name="[6] 2, O" classname="oo.jogodavelha.tests.regras.RegrasDeVitoriaTest" time="0.001"/>
-  <system-out><![CDATA[Historico de jogadas vazio
-O jogador 2 ganhou
-Historico de jogadas vazio
-O jogador 2 ganhou
-Historico de jogadas vazio
-O jogador 1 ganhou
-O jogador 2 ganhou
-Historico de jogadas vazio
-O jogador 2 ganhou
-Historico de jogadas vazio
-O jogador 1 ganhou
-O jogador 2 ganhou
-Historico de jogadas vazio
-O jogador 2 ganhou
-Historico de jogadas vazio
+  <testcase name="[4] 1, O" classname="oo.jogodavelha.tests.regras.RegrasDeVitoriaTest" time="0.001"/>
+  <testcase name="[5] 2, X" classname="oo.jogodavelha.tests.regras.RegrasDeVitoriaTest" time="0.001"/>
+  <testcase name="[6] 2, O" classname="oo.jogodavelha.tests.regras.RegrasDeVitoriaTest" time="0.0"/>
+  <system-out><![CDATA[O jogador 2 ganhou
 O jogador 2 ganhou
 O jogador 1 ganhou
-Historico de jogadas vazio
 O jogador 2 ganhou
-Historico de jogadas vazio
-O jogador 1 ganhou
-O jogador 2 ganhou
-Historico de jogadas vazio
-O jogador 2 ganhou
-Historico de jogadas vazio
-O jogador 1 ganhou
-O jogador 2 ganhou
-Historico de jogadas vazio
-O jogador 2 ganhou
-Historico de jogadas vazio
 O jogador 2 ganhou
 O jogador 1 ganhou
-Historico de jogadas vazio
+O jogador 2 ganhou
+O jogador 2 ganhou
+O jogador 2 ganhou
+O jogador 1 ganhou
+O jogador 2 ganhou
+O jogador 1 ganhou
+O jogador 2 ganhou
+O jogador 2 ganhou
+O jogador 1 ganhou
+O jogador 2 ganhou
+O jogador 2 ganhou
+O jogador 2 ganhou
+O jogador 1 ganhou
 O jogador 2 ganhou
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
