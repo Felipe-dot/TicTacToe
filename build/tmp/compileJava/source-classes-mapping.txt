@@ -2,13 +2,13 @@ oo/jogodavelha/models/Jogada.java
  oo.jogodavelha.models.Jogada
 oo/jogodavelha/exceptions/ExcecaoPorCoordenadaInvalida.java
  oo.jogodavelha.exceptions.ExcecaoPorCoordenadaInvalida
-oo/jogodavelha/models/Jogo.java
- oo.jogodavelha.models.Jogo
+oo/jogodavelha/models/Coordenada.java
+ oo.jogodavelha.models.Coordenada
 oo/jogodavelha/models/Tabuleiro.java
  oo.jogodavelha.models.Tabuleiro
 oo/jogodavelha/exceptions/ExcecaoPorSimboloInvalido.java
  oo.jogodavelha.exceptions.ExcecaoPorSimboloInvalido
-oo/jogodavelha/models/Coordenada.java
- oo.jogodavelha.models.Coordenada
+oo/jogodavelha/models/Jogo.java
+ oo.jogodavelha.models.Jogo
 oo/jogodavelha/Main.java
  oo.jogodavelha.Main
